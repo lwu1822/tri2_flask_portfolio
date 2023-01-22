@@ -7,6 +7,7 @@ from flask import render_template  # import render_template from "public" flask 
 from __init__ import app  # Definitions initialization
 from model.jokes import initJokes
 from model.users import initUsers
+from model.food import initFood 
 
 # setup APIs
 from api.covid import covid_api # Blueprint import api definition
@@ -39,6 +40,7 @@ def stub():
 def activate_job():
     initJokes()
     initUsers()
+    initFood()
 
 # this runs the application on the development server
 if __name__ == "__main__":
